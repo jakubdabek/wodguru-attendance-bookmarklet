@@ -18,17 +18,17 @@
 
     <img src="./assets/mobile-find.png" width="300">
 
-    > [!WARNING]
-    > Kliknięcie na zakładkę na liście zakładek w aplikacji nie działa.
-    > 
-    > Wklejenie kodu bezpośrednio w pasek też nie działa
+> [!WARNING]
+> Kliknięcie na zakładkę na liście zakładek w aplikacji nie działa.
+> 
+> Wklejenie kodu bezpośrednio w pasek też nie działa
 
 5. Dostaniesz komunikat o sukcesie
 
     <img src="./assets/mobile-success.png" width="300">
 
-    > [!NOTE]
-    > W przypadku niepowodzenia dostaniesz komunikat z pomocą.
+> [!NOTE]
+> W przypadku niepowodzenia dostaniesz komunikat z pomocą.
 
 
 # Na komputerze
@@ -53,8 +53,8 @@
 
     <img src="./assets/pc-success.png" width="500">
 
-    > [!NOTE]
-    > W przypadku niepowodzenia dostaniesz komunikat z pomocą.
+> [!NOTE]
+> W przypadku niepowodzenia dostaniesz komunikat z pomocą.
 
 # Pełny kod
 
