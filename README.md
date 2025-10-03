@@ -1,4 +1,7 @@
-# Na telefonie
+# Jak sprawdzić liczbę osób zapisanych na zajęcia?
+<img src="./assets/mobile-result.png" width="500">
+
+## Na telefonie
 
 1. Zapisz dowolną stronę jako zakładkę.
 
@@ -33,7 +36,7 @@
 6. Teraz będzie widoczna lista osób na zajęciach.
     Jeśli za kilka dni zobaczysz że nie ma tej listy, powtórz krok 4.
 
-# Na komputerze
+## Na komputerze
 
 1. Dodaj nową zakładkę (prawy przycisk myszy na pasek zakładek)
 
@@ -61,11 +64,11 @@
 6. Teraz będzie widoczna lista osób na zajęciach.
     Jeśli za kilka dni zobaczysz że nie ma tej listy, powtórz krok 4.
 
-# Kod
+## Kod
 
 Skrócony kod [tutaj](./show-attendance.min.js)
 
-## Pełny kod
+### Pełny kod
 
 [Plik](./show-attendance.js)
 
