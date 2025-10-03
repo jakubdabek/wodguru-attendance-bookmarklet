@@ -6,7 +6,7 @@
 2. Edytuj zakładkę (poświęcamy ją w ofierze) (folder dowolny).
 
    <img src="./assets/mobile-edit.png" width="300">
-3. Nazwij zakładkę w sposób który zapamiętasz ("attendance", "ludzie", "just move" etc.) i wklej poniższy kod w pole URL (pełny kod [na końcu](#pełny-kod)).
+3. Nazwij zakładkę w sposób który zapamiętasz ("attendance", "ludzie", "just move" etc.) i wklej poniższy kod w pole URL (pełny kod [na końcu](#kod), jeśli nie możesz skopiować).
 
    <img src="./assets/mobile-code.png" width="300">
 
@@ -39,7 +39,7 @@
 2. Edytuj zakładkę
 
     <img src="./assets/pc-edit.png" width="400">
-3. Nazwij zakładkę, wklej kod
+3. Nazwij zakładkę, wklej kod (zobacz [kod](#kod) żeby łatwiej skopiować)
 
     <img src="./assets/pc-code.png" width="400">
 
@@ -56,10 +56,16 @@
 > [!NOTE]
 > W przypadku niepowodzenia dostaniesz komunikat z pomocą.
 
-# Pełny kod
+# Kod
+
+Skrócony kod [tutaj](./show-attendance.min.js)
+
+## Pełny kod
+
+[Plik](./show-attendance.js)
 
 ```js
-(function () {
+javascript:(function () {
     try {
         const askLocation = "\n\nMake sure you're on the right page. Go to your training page?";
         const trainingUrl = 'https://szkolatancajustmovedance.wod.guru/my-training';
@@ -67,7 +73,7 @@
         const suffix = '/my-training/facility-meta/get-hide-attendance';
         let foundKey = null;
 
-        // Find the matching key in localStorage
+        /* Find the matching key in localStorage */
         for (let i = 0; i < localStorage.length; i++) {
             const k = localStorage.key(i);
             if (k && k.endsWith(suffix)) {
@@ -96,7 +102,7 @@
         console.log('Before update:', JSON.parse(JSON.stringify(obj)));
 
         obj.data.hideAttendance = 0;
-        obj.expiration = Date.now() + 30 * 24 * 60 * 60 * 1000; // unix timestamp +30 days
+        obj.expiration = Date.now() + 30 * 24 * 60 * 60 * 1000; /* unix timestamp +30 days */
 
         localStorage.setItem(foundKey, JSON.stringify(obj));
 
