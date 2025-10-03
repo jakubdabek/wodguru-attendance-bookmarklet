@@ -23,13 +23,15 @@
 > 
 > Wklejenie kodu bezpośrednio w pasek też nie działa
 
-5. Dostaniesz komunikat o sukcesie
+5. Dostaniesz komunikat o sukcesie, i strona zostanie przeładowana
 
     <img src="./assets/mobile-success.png" width="300">
 
 > [!NOTE]
-> W przypadku niepowodzenia dostaniesz komunikat z pomocą.
+> W przypadku niepowodzenia dostaniesz inny komunikat.
 
+6. Teraz będzie widoczna lista osób na zajęciach.
+    Jeśli za kilka dni zobaczysz że nie ma tej listy, powtórz krok 4.
 
 # Na komputerze
 
@@ -49,12 +51,15 @@
 4. Aby użyć wejdź na stronę `...wod.guru`, kliknij na pasek z adresem strony, znajdź swoją zakładkę, kliknij (wpisz nazwę zakładki w pasek lub kliknij na pasku zakładek).
 
     <img src="./assets/pc-find.png" width="800">
-5. Dostaniesz komunikat o sukcesie
+5. Dostaniesz komunikat o sukcesie, i strona zostanie przeładowana
 
     <img src="./assets/pc-success.png" width="500">
 
 > [!NOTE]
-> W przypadku niepowodzenia dostaniesz komunikat z pomocą.
+> W przypadku niepowodzenia dostaniesz inny komunikat.
+
+6. Teraz będzie widoczna lista osób na zajęciach.
+    Jeśli za kilka dni zobaczysz że nie ma tej listy, powtórz krok 4.
 
 # Kod
 
