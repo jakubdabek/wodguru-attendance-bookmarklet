@@ -6,7 +6,7 @@
         const suffix = '/my-training/facility-meta/get-hide-attendance';
         let foundKey = null;
 
-        // Find the matching key in localStorage
+        /* Find the matching key in localStorage */
         for (let i = 0; i < localStorage.length; i++) {
             const k = localStorage.key(i);
             if (k && k.endsWith(suffix)) {
@@ -35,7 +35,7 @@
         console.log('Before update:', JSON.parse(JSON.stringify(obj)));
 
         obj.data.hideAttendance = 0;
-        obj.expiration = Date.now() + 30 * 24 * 60 * 60 * 1000; // unix timestamp +30 days
+        obj.expiration = Date.now() + 30 * 24 * 60 * 60 * 1000; /* unix timestamp +30 days */
 
         localStorage.setItem(foundKey, JSON.stringify(obj));
 
