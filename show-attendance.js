@@ -1,4 +1,4 @@
-(function () {
+javascript:(function () {
     try {
         const askLocation = "\n\nMake sure you're on the right page. Go to your training page?";
         const trainingUrl = 'https://szkolatancajustmovedance.wod.guru/my-training';
