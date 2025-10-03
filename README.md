@@ -11,7 +11,7 @@
    <img src="./assets/mobile-code.png" width="300">
 
    ```js
-   javascript:(()=>{try{let askLocation="\n\nMake sure you're on the right page. Go to your training page?",trainingUrl="https://szkolatancajustmovedance.wod.guru/my-training";var obj;let foundKey=null;for(let i=0;i<localStorage.length;i++){var k=localStorage.key(i);if(k&&k.endsWith("/my-training/facility-meta/get-hide-attendance")){foundKey=k;break}}foundKey?(obj=JSON.parse(localStorage.getItem(foundKey)))&&obj.data?(console.log("Before update:",JSON.parse(JSON.stringify(obj))),obj.data.hideAttendance=0,obj.expiration=Date.now()+2592e6,localStorage.setItem(foundKey,JSON.stringify(obj)),console.log("After update:",obj),alert("Attendance visibility has been updated.\n")):(console.error("Invalid object format for key",foundKey,obj),confirm("⚠️ Found the settings, but it looks broken."+askLocation)&&(location.href=trainingUrl)):(console.error("No matching key found in localStorage"),confirm("⚠️ Could not find attendance settings."+askLocation)&&(location.href=trainingUrl))}catch(e){console.error("Unexpected error:",e),confirm("⚠️ Something went wrong while updating settings."+askLocation)&&(location.href=trainingUrl)}})();
+   javascript:(()=>{try{let askLocation="\n\nMake sure you're on the right page. Go to your training page?",trainingUrl="https://szkolatancajustmovedance.wod.guru/my-training";var suffix="/my-training/facility-meta/get-hide-attendance",obj;let foundKey=null;for(let i=0;i<localStorage.length;i++){var k=localStorage.key(i);if(k&&k.endsWith(suffix)){foundKey=k;break}}foundKey?(obj=JSON.parse(localStorage.getItem(foundKey)))&&obj.data?(console.log("Before update:",JSON.parse(JSON.stringify(obj))),obj.data.hideAttendance=0,obj.expiration=Date.now()+2592e6,localStorage.setItem(foundKey,JSON.stringify(obj)),console.log("After update:",obj),alert("Attendance visibility has been updated.\n\nReloading page..."),location.reload()):(console.error("Invalid object format for key",foundKey,obj),confirm("⚠️ Found the settings, but it looks broken."+askLocation)&&(location.href=trainingUrl)):(console.error("No matching key found in localStorage"),confirm("⚠️ Could not find attendance settings."+askLocation)&&(location.href=trainingUrl))}catch(e){console.error("Unexpected error:",e),confirm("⚠️ Something went wrong while updating settings."+askLocation)&&(location.href=trainingUrl)}})();
    ```
 
 4. Aby użyć wejdź na stronę `...wod.guru`, kliknij na pasek z adresem strony, znajdź swoją zakładkę, kliknij
@@ -44,7 +44,7 @@
     <img src="./assets/pc-code.png" width="400">
 
     ```js
-    javascript:(()=>{try{let askLocation="\n\nMake sure you're on the right page. Go to your training page?",trainingUrl="https://szkolatancajustmovedance.wod.guru/my-training";var obj;let foundKey=null;for(let i=0;i<localStorage.length;i++){var k=localStorage.key(i);if(k&&k.endsWith("/my-training/facility-meta/get-hide-attendance")){foundKey=k;break}}foundKey?(obj=JSON.parse(localStorage.getItem(foundKey)))&&obj.data?(console.log("Before update:",JSON.parse(JSON.stringify(obj))),obj.data.hideAttendance=0,obj.expiration=Date.now()+2592e6,localStorage.setItem(foundKey,JSON.stringify(obj)),console.log("After update:",obj),alert("Attendance visibility has been updated.\n")):(console.error("Invalid object format for key",foundKey,obj),confirm("⚠️ Found the settings, but it looks broken."+askLocation)&&(location.href=trainingUrl)):(console.error("No matching key found in localStorage"),confirm("⚠️ Could not find attendance settings."+askLocation)&&(location.href=trainingUrl))}catch(e){console.error("Unexpected error:",e),confirm("⚠️ Something went wrong while updating settings."+askLocation)&&(location.href=trainingUrl)}})();
+    javascript:(()=>{try{let askLocation="\n\nMake sure you're on the right page. Go to your training page?",trainingUrl="https://szkolatancajustmovedance.wod.guru/my-training";var suffix="/my-training/facility-meta/get-hide-attendance",obj;let foundKey=null;for(let i=0;i<localStorage.length;i++){var k=localStorage.key(i);if(k&&k.endsWith(suffix)){foundKey=k;break}}foundKey?(obj=JSON.parse(localStorage.getItem(foundKey)))&&obj.data?(console.log("Before update:",JSON.parse(JSON.stringify(obj))),obj.data.hideAttendance=0,obj.expiration=Date.now()+2592e6,localStorage.setItem(foundKey,JSON.stringify(obj)),console.log("After update:",obj),alert("Attendance visibility has been updated.\n\nReloading page..."),location.reload()):(console.error("Invalid object format for key",foundKey,obj),confirm("⚠️ Found the settings, but it looks broken."+askLocation)&&(location.href=trainingUrl)):(console.error("No matching key found in localStorage"),confirm("⚠️ Could not find attendance settings."+askLocation)&&(location.href=trainingUrl))}catch(e){console.error("Unexpected error:",e),confirm("⚠️ Something went wrong while updating settings."+askLocation)&&(location.href=trainingUrl)}})();
     ```
 4. Aby użyć wejdź na stronę `...wod.guru`, kliknij na pasek z adresem strony, znajdź swoją zakładkę, kliknij (wpisz nazwę zakładki w pasek lub kliknij na pasku zakładek).
 
@@ -108,7 +108,8 @@ javascript:(function () {
 
         console.log('After update:', obj);
 
-        alert('Attendance visibility has been updated.\n');
+        alert('Attendance visibility has been updated.\n\nReloading page...');
+        location.reload();
     } catch (e) {
         console.error('Unexpected error:', e);
         if (confirm(`⚠️ Something went wrong while updating settings.${askLocation}`)) {

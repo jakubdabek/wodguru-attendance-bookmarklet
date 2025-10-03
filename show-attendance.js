@@ -41,7 +41,8 @@ javascript:(function () {
 
         console.log('After update:', obj);
 
-        alert('Attendance visibility has been updated.\n');
+        alert('Attendance visibility has been updated.\n\nReloading page...');
+        location.reload();
     } catch (e) {
         console.error('Unexpected error:', e);
         if (confirm(`⚠️ Something went wrong while updating settings.${askLocation}`)) {
